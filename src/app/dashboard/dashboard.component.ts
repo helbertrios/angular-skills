@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -10,9 +10,11 @@ export class DashboardComponent implements OnInit {
 
   cards: Array<any>;
 
+  @Input() showLoader;
   constructor(private httpClient: HttpClient) { }
 
   ngOnInit() {
+    this.showLoader = true;
     this.httpClient.get('/api/skills').subscribe((ret: Array<any>) => this.cards = ret);
   }
 

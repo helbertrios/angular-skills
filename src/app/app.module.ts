@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule, MatCardModule, MatChipsModule } from '@angular/material';
@@ -10,12 +10,15 @@ import { CardComponent } from './dashboard/card/card.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FakeApiService } from './fake-api.service';
 import { HelloComponent } from './hello.component';
-
-
+import {MatGridListModule} from "@angular/material/grid-list";
+import { FlexLayoutModule } from "@angular/flex-layout";
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {MatProgressBarModule} from "@angular/material/progress-bar";
+import {LoaderComponent} from "./loader.component";
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, BrowserAnimationsModule, MatButtonModule, MatChipsModule, MatCardModule, HttpClientModule, InMemoryWebApiModule.forRoot(FakeApiService, {delay: 5000}) ],
-  declarations: [ AppComponent, HelloComponent, DashboardComponent, CardComponent ],
+  imports: [BrowserModule, FormsModule, BrowserAnimationsModule, MatButtonModule, MatChipsModule, MatCardModule, HttpClientModule, InMemoryWebApiModule.forRoot(FakeApiService, {delay: 5000}), MatGridListModule, FlexLayoutModule, MatProgressSpinnerModule, MatProgressBarModule],
+  declarations: [AppComponent, HelloComponent, DashboardComponent, CardComponent, LoaderComponent],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
