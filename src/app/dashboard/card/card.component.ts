@@ -41,7 +41,7 @@ export class CardComponent implements OnInit {
   }
 
   onShare(card: any){
-    // TODO: abrir o link do seu linkedin
+      window.open("http://google.com", "_blank");
   }
 
 }

@@ -10,6 +10,6 @@
   </mat-card-content>
   <mat-card-actions>
     <button mat-button (click)="onLike(card)" [ngStyle]="{'color': (card.likes > 10) ? 'chartreuse' : (card.likes > 4) ? 'blue'  : 'black' }">LIKE {{card.likes}}</button>
-    <button mat-button onclick="window.open('http://google.com','_blank')">SHARE</button>
+    <button mat-button (click)="onShare(card)">SHARE</button>
   </mat-card-actions>
 </mat-card>
