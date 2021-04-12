@@ -13,12 +13,10 @@ import { HelloComponent } from './hello.component';
 import {MatGridListModule} from "@angular/material/grid-list";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
-import {MatProgressBarModule} from "@angular/material/progress-bar";
-import {LoaderComponent} from "./loader.component";
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, BrowserAnimationsModule, MatButtonModule, MatChipsModule, MatCardModule, HttpClientModule, InMemoryWebApiModule.forRoot(FakeApiService, {delay: 5000}), MatGridListModule, FlexLayoutModule, MatProgressSpinnerModule, MatProgressBarModule],
-  declarations: [AppComponent, HelloComponent, DashboardComponent, CardComponent, LoaderComponent],
+  imports: [BrowserModule, FormsModule, BrowserAnimationsModule, MatButtonModule, MatChipsModule, MatCardModule, HttpClientModule, InMemoryWebApiModule.forRoot(FakeApiService, {delay: 5000}), MatGridListModule, FlexLayoutModule, MatProgressSpinnerModule],
+  declarations: [AppComponent, HelloComponent, DashboardComponent, CardComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

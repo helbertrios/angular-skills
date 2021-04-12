@@ -4,10 +4,10 @@
      fxLayout.lt-md="column"
      fxLayoutGap="32px"
      fxLayoutAlign="flex-start">
-    <app-card [card]="card" [showLoader]="showLoader" *ngFor="let card of cards"
+    <app-card [card]="card" *ngFor="let card of cards"
               fxFlex="0 1 calc(33.3% - 32px)"
               fxFlex.md="0 1 calc(50% - 32px)"
-              fxFlex.lt-md="100%"
+              fxFloader.component.tslex.lt-md="100%"
     ></app-card>
 </div>
 

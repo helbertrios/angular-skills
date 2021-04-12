@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {LoaderComponent} from "./loader.component";
 
 @Component({
   selector: 'my-app',
@@ -8,9 +7,5 @@ import {LoaderComponent} from "./loader.component";
 })
 export class AppComponent  {
   name = 'Angular';
-  showLoader = true;
 
-  teste() {
-    LoaderComponent.length
-  }
 }
